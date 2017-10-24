@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+
+html{
+    -webkit-text-size-adjust:100%;/* 关闭字体大小自动调整功能 */
+    -webkit-tap-hightlight-color:transparent;/* a标签及拥有 :active伪类的元素有默认的高亮框(高亮背景) */
+    -webkit-user-select:none;/* 禁止文本被选中 */
+}
+body{
+    overflow-x:hidden;
+    -webkit-overflow-scrolling:touch;/* 开启mobile网页快速滚动和回弹的效果 */
+    font-size:12px;
+}
+*{
+    margin:0;
+    padding:0;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+}
+a{
+    display:block;
+    width:100%;
+    color:#333;
+    text-decoration:none;
+}
+.topLine,a.rightLine{
+    position:relative;
+}
+.topLine:after,a.rightLine:after{
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+}
+.topLine:after{
+    left:0;
+    width:100%;
+    height:1px;
+    border-top:1px solid #ccc;
+    -webkit-transform:scaleY(0.5);
+    transform:scaleY(0.5);
+}
+a.rightLine:after{
+    right:0;
+    width:1px;
+    height:100%;
+    border-right:1px solid #ccc;
+    -webkit-transform:scaleX(0.5);
+    transform:scaleX(0.5);
+}
+img{
+    border:0;
+    display:block;
+    width:100%;
+    vertical-align:middle;
+}
+input{
+    -webkit-appearance:none;/* 去掉input框所有的默认样式 */
+    outline:none;
+    border:0;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.clearfix:after{
+    content:"";
+    display:block;
+    width:100%;
+    height:0;
+    clear:both;
+}
+li,ol{
+    list-style:none;
+}
+.sprite-icon{
+    display:inline-block;
+    background:url("../images/jd-sprites.png") no-repeat;
+    background-size:200px 200px;
+}
+
